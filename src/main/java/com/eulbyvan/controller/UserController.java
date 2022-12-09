@@ -16,11 +16,15 @@ import java.util.List;
  * @since 09/12/2022
  */
 
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api")
 public class UserController {
     private IUserService userService;
+
+    public UserController(IUserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/users")
     public ResponseEntity<List<User>> getUsers() {
