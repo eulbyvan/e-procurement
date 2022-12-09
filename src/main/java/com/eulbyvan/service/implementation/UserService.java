@@ -1,9 +1,10 @@
-package com.eulbyvan.service;
+package com.eulbyvan.service.implementation;
 
 import com.eulbyvan.model.Role;
 import com.eulbyvan.model.User;
 import com.eulbyvan.repo.IRoleRepo;
 import com.eulbyvan.repo.IUserRepo;
+import com.eulbyvan.service.IUserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

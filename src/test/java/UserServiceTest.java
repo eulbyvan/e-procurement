@@ -1,7 +1,7 @@
 import com.eulbyvan.model.User;
 import com.eulbyvan.repo.IRoleRepo;
 import com.eulbyvan.repo.IUserRepo;
-import com.eulbyvan.service.UserService;
+import com.eulbyvan.service.implementation.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
