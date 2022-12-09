@@ -4,6 +4,7 @@ import com.eulbyvan.model.Product;
 import com.eulbyvan.repo.IProductRepo;
 import com.eulbyvan.service.IProductService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,14 +17,16 @@ import java.util.Optional;
  * @since 09/12/2022
  */
 
-@RequiredArgsConstructor
 @Service
+@RequiredArgsConstructor
 @Transactional
+@Slf4j
 public class ProductService implements IProductService {
-    private IProductRepo productRepo;
+    private final IProductRepo productRepo;
 
     @Override
     public List<Product> getProducts() {
+        log.info("fetching all products ...");
         return productRepo.findAll();
     }
 
