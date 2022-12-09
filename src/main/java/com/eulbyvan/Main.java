@@ -1,7 +1,14 @@
 package com.eulbyvan;
 
+import com.eulbyvan.model.Role;
+import com.eulbyvan.model.User;
+import com.eulbyvan.service.UserService;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import java.util.ArrayList;
 
 /**
  * @author stu (https://www.eulbyvan.com/)
@@ -14,4 +21,24 @@ public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
+
+//    @Bean
+//    CommandLineRunner run(UserService userService) {
+//        return args -> {
+//            userService.saveRole(new Role(null, "ROLE_USER"));
+//            userService.saveRole(new Role(null, "ROLE_MANAGER"));
+//            userService.saveRole(new Role(null, "ROLE_ADMIN"));
+//            userService.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
+//
+//            userService.saveUser(new User(null, "stu", "stu", "pid", new ArrayList<>()));
+//            userService.saveUser(new User(null, "test01", "test01", "test01", new ArrayList<>()));
+//            userService.saveUser(new User(null, "test02", "test02", "test02", new ArrayList<>()));
+//            userService.saveUser(new User(null, "test03", "test03", "test03", new ArrayList<>()));
+//
+//            userService.assignRole("stu", "ROLE_SUPER_ADMIN");
+//            userService.assignRole("test01", "ROLE_USER");
+//            userService.assignRole("test02", "ROLE_MANAGER");
+//            userService.assignRole("test03", "ROLE_ADMIN");
+//        };
+//    }
 }
