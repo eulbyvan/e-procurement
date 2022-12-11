@@ -29,6 +29,4 @@ public class Product {
     private String name;
     @Column(nullable = false)
     private Double price;
-    @ManyToMany(fetch = EAGER)
-    private List<Vendor> vendors = new ArrayList<>();
 }
